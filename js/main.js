@@ -1,5 +1,4 @@
 (function(){
-    // Vertical Timeline - by CodyHouse.co
 	function VerticalTimeline( element ) {
 		this.element = element;
 		this.blocks = this.element.getElementsByClassName("js-cd-block");
@@ -18,8 +17,8 @@
 		for( var i = 0; i < this.blocks.length; i++) {
 			(function(i){
 				if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
-					self.images[i].classList.add("cd-is-hidden"); 
-					self.contents[i].classList.add("cd-is-hidden"); 
+					self.images[i].classList.add("cd-is-hidden");
+					self.contents[i].classList.add("cd-is-hidden");
 				}
 			})(i);
 		}
@@ -39,6 +38,27 @@
 					self.images[i].classList.remove("cd-is-hidden");
 					self.contents[i].classList.remove("cd-is-hidden");
 				}
+
+
+
+                // if( self.contents[i].classList.contains("cd-is-hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight*self.offset ) {
+                //     // add bounce-in animation
+                //     self.images[i].classList.add("cd-timeline__img--bounce-in");
+                //     self.contents[i].classList.add("cd-timeline__content--bounce-in");
+                //     self.images[i].classList.remove("cd-is-hidden");
+                //     self.contents[i].classList.remove("cd-is-hidden");
+                // }
+				//
+				//
+				//
+                // if( $(this).offset().top < $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').is('.is-hidden, .bounce-out') ) {
+                //     $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden bounce-out').addClass('bounce-in');
+                // }
+                // if($(this).offset().top >= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').is('.bounce-in')) {
+                //     $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('bounce-in').addClass('bounce-out');
+                // } else if($(this).offset().top >= $(window).scrollTop()+$(window).height()*0.80 && $(this).find('.cd-timeline-img').is('.bounce-out')) {
+                //     $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('bounce-out').addClass('is-hidden');
+                // }
 			})(i);
 		}
 	};

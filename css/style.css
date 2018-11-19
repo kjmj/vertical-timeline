@@ -33,6 +33,11 @@ h1, h2 {
   font-weight: bold;
 }
 
+li {
+  list-style-type: disc;
+  margin-left: 4px;
+}
+
 /* --------------------------------
 
 Patterns - reusable parts of our design
