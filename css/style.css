@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -14,7 +14,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Droid Serif", serif;
+  font-family: "Gilroy", sans-serif;
   color: #7f8c97;
   background-color: #e9f0f5;
 }
@@ -29,11 +29,11 @@ img {
 }
 
 h1, h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: bold;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Patterns - reusable parts of our design
 
@@ -44,9 +44,9 @@ Patterns - reusable parts of our design
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Vertical Timeline - by CodyHouse.co
+Vertical Timeline - elements of the timeline
 
 -------------------------------- */
 header {
@@ -58,17 +58,25 @@ header {
 
 header h1 {
   color: white;
-  font-size: 1.8rem;
+  font-size: 3rem;
+  line-height: 10rem;
 }
 
+header h2 {
+  color: white;
+  font-size: 1.4rem;
+  width: 35%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  margin: 0 auto;
+
+}
 @media only screen and (min-width: 1170px) {
   header {
     height: 300px;
     line-height: 300px;
   }
-  header h1 {
-    font-size: 2.4rem;
-  }
+
 }
 
 .cd-timeline {
@@ -154,16 +162,16 @@ header h1 {
   margin-top: -12px;
 }
 
-.cd-timeline__img.cd-timeline__img--picture {
+.cd-timeline__img.cd-timeline__img--IQP_Award {
+  background: #ffcd01;
+}
+
+.cd-timeline__img.cd-timeline__img--Publication {
+  background: #ff9901;
+}
+
+.cd-timeline__img.cd-timeline__img--Other {
   background: #75ce66;
-}
-
-.cd-timeline__img.cd-timeline__img--movie {
-  background: #c03b44;
-}
-
-.cd-timeline__img.cd-timeline__img--location {
-  background: #f0ca45;
 }
 
 @media only screen and (min-width: 1170px) {
