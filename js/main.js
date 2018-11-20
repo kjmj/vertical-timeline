@@ -17,9 +17,10 @@
 		for( var i = 0; i < this.blocks.length; i++) {
 			(function(i){
 				if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
-					self.images[i].classList.add("cd-is-hidden");
-					self.contents[i].classList.add("cd-is-hidden");
+					self.images[i].classList.add("cd-timeline__img--hide-animation");
+					self.contents[i].classList.add("cd-timeline__content--hide-animation");
 				}
+
 			})(i);
 		}
 	};
@@ -31,29 +32,20 @@
 		var self = this;
 		for( var i = 0; i < this.blocks.length; i++) {
 			(function(i){
-                if( self.contents[i].classList.contains("cd-is-hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight*(self.offset-.05) ) {
-                    // add bounce-in animation
-                    self.images[i].classList.add("cd-timeline__img--bounce-in");
-                    self.contents[i].classList.add("cd-timeline__content--bounce-in");
-                    // item is no longer hidden
-                    self.images[i].classList.remove("cd-is-hidden");
-                    self.contents[i].classList.remove("cd-is-hidden");
+
+                if( self.contents[i].classList.contains("cd-timeline__content--hide-animation") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight*self.offset ) {
+                        self.images[i].classList.remove("cd-timeline__img--hide-animation");
+                        self.contents[i].classList.remove("cd-timeline__content--hide-animation");
+
+                        self.images[i].classList.add("cd-timeline__img--show-animation");
+                        self.contents[i].classList.add("cd-timeline__content--show-animation");
                 }
-                else if(self.contents[i].classList.contains("cd-timeline__content--bounce-in") && self.blocks[i].getBoundingClientRect().top >= window.innerHeight*(self.offset-.05)) {
-					// add bounce-out animation
-                    self.images[i].classList.add("cd-timeline__img--bounce-out");
-                    self.contents[i].classList.add("cd-timeline__content--bounce-out");
-                    // item is no longer in bounce-in
-                	self.images[i].classList.remove("cd-timeline__img--bounce-in");
-                    self.contents[i].classList.remove("cd-timeline__content--bounce-in");
-                }
-                else if(self.contents[i].classList.contains("cd-timeline__content--bounce-out") && self.blocks[i].getBoundingClientRect().top >= window.innerHeight*self.offset) {
-                	// item is now hidden
-                    self.images[i].classList.add("cd-is-hidden");
-                    self.contents[i].classList.add("cd-is-hidden");
-                    // item is no longer in bounce-out
-                	self.images[i].classList.remove("cd-timeline__img--bounce-out");
-                    self.contents[i].classList.remove("cd-timeline__content--bounce-out");
+                else if( !self.contents[i].classList.contains("cd-timeline__content--hide-animation") && self.blocks[i].getBoundingClientRect().top >= window.innerHeight*self.offset) {
+                    self.images[i].classList.remove("cd-timeline__img--show-animation");
+                    self.contents[i].classList.remove("cd-timeline__content--show-animation");
+
+                    self.images[i].classList.add("cd-timeline__img--hide-animation");
+                    self.contents[i].classList.add("cd-timeline__content--hide-animation");
                 }
 			})(i);
 		}
@@ -81,6 +73,7 @@
 	function checkTimelineScroll() {
 		verticalTimelinesArray.forEach(function(timeline){
 			timeline.showBlocks();
+			// console.log("showblocks");
 		});
 		scrolling = false;
 	};
