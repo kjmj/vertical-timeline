@@ -12,8 +12,6 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             let type = data.feed.entry[key].gsx$type.$t;
             let readMoreLink = data.feed.entry[key].gsx$readmorelink.$t;
 
-
-
             // create elements for the timeline block
             let div1 = document.createElement("div");
             div1.className = "cd-timeline__block js-cd-block";
@@ -43,18 +41,16 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             span.className = "cd-timeline__date";
             span.innerHTML = date;
 
-
             let a = document.createElement("a");
-            a.href = readMoreLink;
+            a.src = readMoreLink;
             a.target = "_blank";
             a.className = "cd-timeline__read-more";
             a.innerHTML = "Read More";
 
             let img = document.createElement("img");
             img.src = imageLink;
-            console.log(img.src);
 
-            // build the block
+            // build the timeline block
             div2.appendChild(icon);
 
             div3.appendChild(h2);
@@ -62,9 +58,10 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
                 div3.appendChild(img);
             }
             div3.appendChild(p);
-            div3.appendChild(a);
+            if(a.src != "") {
+                div3.appendChild(a);
+            }
             div3.appendChild(span);
-
 
             div1.append(div2);
             div1.append(div3);
