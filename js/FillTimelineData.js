@@ -22,16 +22,12 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
 
             let icon = document.createElement("img");
             if(type.localeCompare("IQP_Award")) {
-                console.log("award");
                 icon.src = "img/cd-icon-flag.png";
                 icon.alt = "Flag";
             } else if (type.localeCompare("Other")) {
-                console.log("other");
-
                 icon.src = "img/cd-icon-star.png";
                 icon.alt = "IQP Award";
             } else {
-                console.log("failed")
             }
 
             let div3 = document.createElement("div");
@@ -54,9 +50,10 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             a.className = "cd-timeline__read-more";
             a.innerHTML = "Read More";
 
-            let img = document.createElement("img");
-            img.alt = "Flag";
-            img.src = imageLink;
+            //TODO add image handling functionality
+            // let img = document.createElement("img");
+            // img.alt = "Flag";
+            // img.src = imageLink;
 
             div2.appendChild(icon);
             // div2.appendChild(img);
