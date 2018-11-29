@@ -10,80 +10,28 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
 
+
 	<title>VPC Timeline</title>
 </head>
+
 <body>
 	<header>
 		<h1>History of the Venice Project Center</h1>
 		<h2>Founded in 1988 by Fabio Carerra, the Venice Project Center gave WPI students an opportunity to apply their technical and non-technical skills to help the city of Venice.</h2>
 	</header>
 
+	<script src="CKData.js"></script>
+
 	<section class="cd-timeline js-cd-timeline">
+
 		<div class="cd-timeline__container">
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--Other js-cd-img">
-					<img src="img/cd-icon-flag.png" alt="Flag">
-				</div> <!-- cd-timeline__img -->
 
-				<div class="cd-timeline__content js-cd-content">
-					<h2>The Pioneer Team Project</h2>
-					<img src="img/pioneer-team.JPG" alt="Pioneer Team">
-
-					<p>Fabio Carerra, a recent graduate of WPI, had a vision for his home city of Venice. Dr. Frederic Lane, author of <u>Venice: A Maritime Republic</u>, inspired Carerra to create the Venice Project Center. Carerra gathered 6 WPI students to determine oppurtunities that would be suitible for future IQP Projects. They created final proposals that were eventually used in future projects.</p>
-					<p><b>Fun Facts:</b></p>
-
-					<ul>
-						<li>The project center ran out of Carerra's parents home</li>
-						<li>The National Council of Research (NRC) provided meeting facilities, fax machines, and other logistical items</li>
-					</ul>
-
-					<a href="https://drive.google.com/drive/folders/1poVrVB7iI2He6pXqrKK8GsfPflQ4b-rL?usp=sharing" target="_blank" class="cd-timeline__read-more">View their photos</a>
-					<span class="cd-timeline__date">1988</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--IQP_Award js-cd-img">
-					<img src="img/cd-icon-star.png" alt="Star">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Lagoon Archeology (IQP Award)</h2>
-					<p>Focused on many different aspects of the Venetian  Lagoon such a its pollution, possible island space re-utilization, and farming opportunities. THis 1990 IQP Award was the first award given to the Venice Project Center and proved there is plenty of opportunity for good work to be done here by students.
-					</p>
-					<a href="#0" class="cd-timeline__read-more">Read more</a>
-					<span class="cd-timeline__date">1990</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--IQP_Award js-cd-img">
-					<img src="img/cd-icon-star.png" alt="IQP Award">
-				</div> <!-- cd-timeline__img -->
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Museums of Venice (IQP Award)</h2>
-					<p>The students worked with the Ca' Rezzonico Museum on creating and cataloging the inventory into a database. This served as a model for future database for organizations to manage their inventory. THis was a time where massive databases were extremely new and advanced.</p>
-					<a href="#0" class="cd-timeline__read-more">Read more</a>
-					<span class="cd-timeline__date">1991</span>
-				</div> <!-- cd-timeline__content -->
-			</div>
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--Other js-cd-img">
-					<img src="img/cd-icon-flag.png" alt="Other">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>WPI officially recognizes the VPC as an official project center</h2>
-					<p>The VPC was the first IQP center in a country whose native language was not English</p>
-					<a href="#0" class="cd-timeline__read-more">Read more</a>
-					<span class="cd-timeline__date">1993</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-
+			<script src="js/FillTimelineData.js"></script> <!-- JS to query database and fill the spreadsheet -->
 
 		</div>
+
 	</section> <!-- cd-timeline -->
 
-<script src="js/main.js"></script> <!-- Resource JavaScript -->
+<script src="js/main.js"></script> <!-- Javascript that determines when blocks are hidden/shown -->
 </body>
 </html>
