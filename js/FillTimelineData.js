@@ -9,16 +9,20 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             let description = data.feed.entry[key].gsx$desctiption.$t;
             let date = data.feed.entry[key].gsx$date.$t;
             let imageLink = data.feed.entry[key].gsx$imagelink.$t;
-            //let icon = data.feed.entry[0].gsx$icon.$t;
             let type = data.feed.entry[key].gsx$type.$t;
             let readMoreLink = data.feed.entry[key].gsx$readmorelink.$t;
 
-            //Create the timeline block here
+
+
+            // create elements for the timeline block
             let div1 = document.createElement("div");
             div1.className = "cd-timeline__block js-cd-block";
 
             let div2 = document.createElement("div");
             div2.className = "cd-timeline__img cd-timeline__img--" + type + " js-cd-img";
+
+            let div3 = document.createElement("div");
+            div3.className = "cd-timeline__content js-cd-content";
 
             let icon = document.createElement("img");
             if(type.localeCompare("IQP_Award")) {
@@ -27,11 +31,7 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             } else if (type.localeCompare("Other")) {
                 icon.src = "img/cd-icon-star.png";
                 icon.alt = "IQP Award";
-            } else {
             }
-
-            let div3 = document.createElement("div");
-            div3.className = "cd-timeline__content js-cd-content";
 
             let h2 = document.createElement("h2");
             h2.innerHTML = title;
@@ -50,15 +50,17 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             a.className = "cd-timeline__read-more";
             a.innerHTML = "Read More";
 
-            //TODO add image handling functionality
-            // let img = document.createElement("img");
-            // img.alt = "Flag";
-            // img.src = imageLink;
+            let img = document.createElement("img");
+            img.src = imageLink;
+            console.log(img.src);
 
+            // build the block
             div2.appendChild(icon);
-            // div2.appendChild(img);
 
             div3.appendChild(h2);
+            if(img.src != '') {
+                div3.appendChild(img);
+            }
             div3.appendChild(p);
             div3.appendChild(a);
             div3.appendChild(span);
