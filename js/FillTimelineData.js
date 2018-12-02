@@ -23,12 +23,12 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             div3.className = "cd-timeline__content js-cd-content";
 
             let icon = document.createElement("img");
-            if(type.localeCompare("IQP_Award")) {
-                icon.src = "img/cd-icon-flag.png";
-                icon.alt = "Flag";
-            } else if (type.localeCompare("Other")) {
+            if(type == "IQP_Award") {
                 icon.src = "img/cd-icon-star.png";
-                icon.alt = "IQP Award";
+            } else if (type == "Other") {
+                icon.src = "img/cd-icon-towers.png";
+            } else if (type == "Pub") {
+                icon.src = "img/cd-icon-pub.png";
             }
 
             let h2 = document.createElement("h2");

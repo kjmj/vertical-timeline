@@ -64,16 +64,16 @@ header {
 
 header h1 {
   color: white;
-  font-size: 3rem;
-  line-height: 10rem;
+  font-size: 3.8rem;
+  line-height: 4rem;
 }
 
 header h2 {
   color: white;
-  font-size: 1.4rem;
+  font-size: 2rem;
   width: 35%;
   word-wrap: break-word;
-  line-height: 1.4;
+  line-height: 2;
   margin: 0 auto;
 
 }
@@ -172,12 +172,12 @@ header h2 {
   background: #ffcd01;
 }
 
-.cd-timeline__img.cd-timeline__img--Publication {
+.cd-timeline__img.cd-timeline__img--Pub {
   background: #ff9901;
 }
 
 .cd-timeline__img.cd-timeline__img--Other {
-  background: #75ce66;
+  background: #ff0000;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -303,8 +303,9 @@ header h2 {
     position: absolute;
     width: 100%;
     left: 122%;
-    top: 6px;
-    font-size: 1.6rem;
+    top: .5px;
+    font-size: 4rem;
+    color: #000000;
   }
   .cd-timeline__block:nth-child(even) .cd-timeline__content {
     float: right;
