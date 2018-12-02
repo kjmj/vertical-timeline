@@ -56,10 +56,13 @@ Vertical Timeline - elements of the timeline
 
 -------------------------------- */
 header {
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   line-height: 200px;
   text-align: center;
   background: #303e49;
+  padding: 2%;
 }
 
 header h1 {
@@ -71,12 +74,13 @@ header h1 {
 header h2 {
   color: white;
   font-size: 2rem;
-  width: 35%;
+  width: 75%;
   word-wrap: break-word;
   line-height: 2;
   margin: 0 auto;
 
 }
+/*
 @media only screen and (min-width: 1170px) {
   header {
     height: 300px;
@@ -84,6 +88,7 @@ header h2 {
   }
 
 }
+*/
 
 .cd-timeline {
   overflow: hidden;
@@ -238,6 +243,7 @@ header h2 {
 .cd-timeline__read-more,
 .cd-timeline__date {
   font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .cd-timeline__content p {
@@ -303,7 +309,7 @@ header h2 {
     position: absolute;
     width: 100%;
     left: 122%;
-    top: .5px;
+    top: -20px;
     font-size: 4rem;
     color: #000000;
   }

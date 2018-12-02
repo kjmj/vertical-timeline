@@ -12,6 +12,7 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
             let type = data.feed.entry[key].gsx$type.$t;
             let readMoreLink = data.feed.entry[key].gsx$readmorelink.$t;
 
+            console.log('buttz', imageLink);
             // create elements for the timeline block
             let div1 = document.createElement("div");
             div1.className = "cd-timeline__block js-cd-block";
