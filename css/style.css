@@ -17,6 +17,8 @@ body {
   font-family: "Droid Serif", serif;
   color: #7f8c97;
   background-color: #e9f0f5;
+  background: #1B212C;
+
 }
 
 a {
@@ -38,12 +40,29 @@ li {
   margin-left: 4px;
 }
 
+#filterDropdown {
+  width: 150px;
+}
+#sortDropdown {
+  width: 150px;
+}
+
+iframe {
+  position: relative;
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 20vw;
+}
+
+
 /* --------------------------------
 
 Patterns - reusable parts of our design
 
 -------------------------------- */
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1545px) {
 
   .cd-hide {
     visibility: hidden;
@@ -61,7 +80,8 @@ header {
   width: 100%;
   line-height: 200px;
   text-align: center;
-  background: #303e49;
+  background-image: linear-gradient(#292F3B, #1B212C);
+  background-repeat: no-repeat;
   padding: 2%;
 }
 
@@ -81,7 +101,7 @@ header h2 {
 
 }
 /*
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1545px) {
   header {
     height: 300px;
     line-height: 300px;
@@ -114,7 +134,7 @@ header h2 {
   background: #d7e4ed;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1545px) {
   .cd-timeline {
     margin-top: 3em;
     margin-bottom: 3em;
@@ -127,7 +147,7 @@ header h2 {
 
 .cd-timeline__block {
   position: relative;
-  margin: 2em 0;
+  margin: 0.5em 0;
 }
 
 .cd-timeline__block:after {
@@ -145,9 +165,9 @@ header h2 {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1545px) {
   .cd-timeline__block {
-    margin: 4em 0;
+    margin: 1em 0;
   }
 }
 
@@ -177,15 +197,15 @@ header h2 {
   background: #ffcd01;
 }
 
-.cd-timeline__img.cd-timeline__img--Pub {
+.cd-timeline__img.cd-timeline__img--Publication {
   background: #ff9901;
 }
 
 .cd-timeline__img.cd-timeline__img--Other {
-  background: #ff0000;
+  background: #e9360c;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1545px) {
   .cd-timeline__img {
     width: 60px;
     height: 60px;
@@ -287,7 +307,7 @@ header h2 {
   }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1545px) {
   .cd-timeline__content {
     margin-left: 0;
     padding: 1.0em;
@@ -312,7 +332,7 @@ header h2 {
     left: 115%; /* date */
     top: -20px;
     font-size: 4rem;
-    color: #000000;
+    color: #ffffff;
   }
   .cd-timeline__block:nth-child(even) .cd-timeline__content {
     float: right;
@@ -343,7 +363,7 @@ header h2 {
   }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1545px) {
   /* inverse bounce effect on even content blocks */
   .cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--show-animation {
     visibility: visible;
