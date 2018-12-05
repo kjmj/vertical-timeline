@@ -154,6 +154,8 @@ function constructPage(data) {
                 icon.src = "img/cd-icon-towers.png";
             } else if (type == "Publication") {
                 icon.src = "img/cd-icon-pub.png";
+            }else if (type == "Application") {
+                icon.src = "img/cd-icon-application.png";
             }
 
             // Title
