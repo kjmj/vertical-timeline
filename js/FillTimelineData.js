@@ -21,8 +21,6 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
 
         filteredData = filterData(data, value);
         sortedData = sortData(filteredData, sortValue);
-        console.log("Filtered by: " + value);
-        console.log("Sorted by: " + sortValue);
         document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
         // document.getElementsByClassName("cd-timeline__container")[0].appendChild(sortDropdown);
         // document.getElementsByClassName("cd-timeline__container")[0].appendChild(filterDropdown);
@@ -39,8 +37,6 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
 
         filteredData = filterData(data, filterValue);
         sortedData = sortData(filteredData, value);
-        console.log("Filtered by: " + filterValue);
-        console.log("Sorted by: " + value);
         document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
         // document.getElementsByClassName("cd-timeline__container")[0].appendChild(sortDropdown);
         // document.getElementsByClassName("cd-timeline__container")[0].appendChild(filterDropdown);
@@ -169,6 +165,10 @@ function constructPage(data) {
             p.innerHTML = description;
             p.id = key;
 
+            if(title === "The Pioneer Team Project") {
+                console.log(description);
+            }
+
             // Date
             let date = data[key].gsx$date.$t;
             let span = document.createElement("span");
@@ -218,7 +218,6 @@ function constructPage(data) {
                 div3.appendChild(img);
             }
             if(youtubeLink !== '') {
-                console.log(iframe.src);
                 div3.appendChild(iframe);
             }
             div3.appendChild(p);

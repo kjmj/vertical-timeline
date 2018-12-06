@@ -8,13 +8,31 @@ Primary style
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('../font/Gilroy-Light.ttf');
+}
+@font-face {
+  font-family: 'Gilroy-Black';
+  src: url('../font/Gilroy-Black.ttf');
+}
+
+b {
+  font-family: "Gilroy-Black";
+  /*font-size: 100px;*/
+}
+
+h2 {
+  padding: 10px;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: "Droid Serif", serif;
+  font-family: "Gilroy-Light";
   color: #7f8c97;
   background-color: #e9f0f5;
   background: #1B212C;
@@ -31,7 +49,7 @@ img {
 }
 
 h1, h2 {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy-Light";
   font-weight: bold;
 }
 
