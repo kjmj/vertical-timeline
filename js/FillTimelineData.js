@@ -160,7 +160,7 @@ function constructPage(data) {
             h2.innerHTML = title;
 
             // Description
-            let description = data[key].gsx$desctiption.$t;
+            let description = data[key].gsx$description.$t;
             let p = document.createElement("p");
             p.innerHTML = description;
             p.id = key;

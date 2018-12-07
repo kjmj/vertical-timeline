@@ -22,8 +22,16 @@ b {
   /*font-size: 100px;*/
 }
 
+header {
+  font-color: white;
+}
+
+body {
+}
 h2 {
   padding: 10px;
+  color: white;
+
 }
 
 html {
