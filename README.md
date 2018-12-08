@@ -1,19 +1,14 @@
 Vertical Timeline
 =========
-An easy to customize, responsive timeline.
+A timeline designed to highlight the Venice Project Center's (VPC) most important moments since it was founded in 1988.
 
 [Article on CodyHouse](http://codyhouse.co/gem/vertical-timeline/)
  
 [Terms](http://codyhouse.co/terms/)
 
-Icons: [Nucleo](https://nucleoapp.com)
+**Steup**
 
-
-**Get Everything Setup**
-
-Install NodeJs from [here] (https://nodejs.org/en/download/)
-
-Open index.html
+Just open "index.html"
 
 
 
