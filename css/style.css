@@ -5,7 +5,7 @@ Primary style
 -------------------------------- */
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -20,6 +20,7 @@ Primary style
 b {
   font-family: "Gilroy-Black";
 }
+
 
 h2 {
   padding: 10px;
@@ -45,6 +46,7 @@ a {
 
 img {
   max-width: 100%;
+  max-height: 25em;
 }
 
 h1, h2 {
@@ -85,7 +87,7 @@ iframe {
 Patterns - reusable parts of our design
 
 -------------------------------- */
-@media only screen and (min-width: 1545px) {
+@media only screen and (min-width: 1276px) {
 
   .cd-hide {
     visibility: hidden;
@@ -125,7 +127,7 @@ header h2 {
 
 }
 /*
-@media only screen and (min-width: 1545px) {
+@media only screen and (min-width: 1276px) {
   header {
     height: 300px;
     line-height: 300px;
@@ -141,8 +143,8 @@ header h2 {
 
 .cd-timeline__container {
   position: relative;
-  width: 90%;
-  max-width: 1170px;
+  width: 100%;
+  /*max-width: 1170px;*/
   margin: 0 auto;
   padding: 2em 0;
 }
@@ -156,9 +158,10 @@ header h2 {
   height: 100%;
   width: 4px;
   background: #d7e4ed;
+  margin-left: 10px;
 }
 
-@media only screen and (min-width: 1545px) {
+@media only screen and (min-width: 1276px) {
   .cd-timeline {
     margin-top: 3em;
     margin-bottom: 3em;
@@ -189,7 +192,7 @@ header h2 {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 1545px) {
+@media only screen and (min-width: 1276px) {
   .cd-timeline__block {
     margin: 1em 0;
   }
@@ -202,8 +205,9 @@ header h2 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  margin-left: 10px;
   -webkit-box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .cd-timeline__img img {
@@ -233,7 +237,7 @@ header h2 {
   background: #88d8b0;
 }
 
-@media only screen and (min-width: 1545px) {
+@media only screen and (min-width: 1276px) {
   .cd-timeline__img {
     width: 60px;
     height: 60px;
@@ -241,7 +245,7 @@ header h2 {
     margin-left: -30px;
     /* Force Hardware Acceleration */
     -webkit-transform: translateZ(0);
-            /*transform: translateZ(0);*/
+    transform: translateZ(0);
   }
   .cd-timeline__img.cd-timeline__img--show-animation {
     visibility: visible;
@@ -256,12 +260,12 @@ header h2 {
 
 .cd-timeline__content {
   position: relative;
-  margin-left: 60px;
+  margin-left: 70px;
   background: white;
   border-radius: 0.25em;
   padding: 1em;
   -webkit-box-shadow: 0 3px 0 #d7e4ed;
-          box-shadow: 0 3px 0 #d7e4ed;
+  box-shadow: 0 3px 0 #d7e4ed;
 }
 
 .cd-timeline__content:after {
@@ -291,7 +295,7 @@ header h2 {
 .cd-timeline__read-more,
 .cd-timeline__date {
   font-size: 1.3rem;
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .cd-timeline__content p {
@@ -335,15 +339,16 @@ header h2 {
   }
 }
 
-@media only screen and (min-width: 1545px) {
+@media only screen and (min-width: 1276px) {
   .cd-timeline__content {
-    margin-left: 0;
+    margin-left: 1em;
     padding: 1.0em;
-    width: 60%;
-    right: 15%; /* here */
+    width: 45%;
+    /*margin-right: 14em;*/
+    /*right: 15%; !* here *!*/
     /* Force Hardware Acceleration */
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
   }
   .cd-timeline__content::before {
     top: 24px;
@@ -364,7 +369,7 @@ header h2 {
   }
   .cd-timeline__block:nth-child(even) .cd-timeline__content {
     float: right;
-    left: 15%; /* here*/
+    left: -1em; /* here*/
   }
   .cd-timeline__block:nth-child(even) .cd-timeline__content::before {
     top: 24px;
@@ -391,7 +396,7 @@ header h2 {
   }
 }
 
-@media only screen and (min-width: 1545px) {
+@media only screen and (min-width: 1276px) {
   /* inverse bounce effect on even content blocks */
   .cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--show-animation {
     visibility: visible;
@@ -408,13 +413,16 @@ header h2 {
     opacity: 0;
     visibility: hidden;
     -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
   60% {
     -webkit-transform: scale(1.2);
+    transform: scale(1.2);
   }
   99% {
     opacity: 1;
     -webkit-transform: scale(1);
+    transform: scale(1);
   }
   100% {
     visibility: visible;
@@ -426,13 +434,16 @@ header h2 {
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
   60% {
     -webkit-transform: scale(1.2);
+    transform: scale(1.2);
   }
   99% {
     opacity: 0;
     -webkit-transform: scale(0);
+    transform: scale(0);
   }
   100% {
     visibility: hidden;
@@ -444,13 +455,16 @@ header h2 {
     opacity: 0;
     visibility: hidden;
     -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
   }
   60% {
     opacity: 1;
     -webkit-transform: translateX(20px);
+    transform: translateX(20px);
   }
   99% {
     -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     visibility: visible;
@@ -462,13 +476,16 @@ header h2 {
     opacity: 0;
     visibility: hidden;
     -webkit-transform: translateX(100px);
+    transform: translateX(100px);
   }
   60% {
     opacity: 1;
     -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
   }
   99% {
     -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     visibility: visible;
@@ -483,6 +500,7 @@ header h2 {
   99% {
     opacity: 0;
     -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
   }
   100% {
     visibility: hidden;
@@ -497,6 +515,7 @@ header h2 {
   99% {
     opacity: 0;
     -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
   }
   100% {
     visibility: hidden;
