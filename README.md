@@ -6,7 +6,7 @@ This timeline was designed to highlight the Venice Project Center's (VPC) most i
 
 Just open "index.html"
 
-**Recommendations**
+**The Basics**
 
 Timeline data is pulled and filled from a Google Spreadsheet. We added functionality for the user to read in data from a CSV file if they please.
 
