@@ -113,10 +113,10 @@ function constructTimeline(data) {
             let iconElement = document.createElement("img");
             if(category === "IQP_Award") {
                 iconElement.src = "img/cd-icon-star.png";
-            } else if (category === "Other") {
+            } else if (category === "Milestone") {
                 iconElement.src = "img/cd-icon-towers.png";
             } else if (category === "Publication") {
-                iconElement.src = "img/cd-icon-pub.png";
+                iconElement.src = "img/cd-icon-publication.png";
             }else if (category === "Application") {
                 iconElement.src = "img/cd-icon-application.png";
             }
