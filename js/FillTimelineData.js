@@ -25,6 +25,9 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
         constructTimeline(filteredAndSorted);
     };
 
+    document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
+    constructTimeline(filterAndSort(data));
+
 }).catch(err => {
     console.log(err);
 });
@@ -38,12 +41,13 @@ function createSortDropdown() {
 
     let defaultOption = document.createElement("option");
     defaultOption.selected = "selected";
-    defaultOption.disabled = "disabled";
-    defaultOption.innerHTML = "--- Sort By ---";
+    //defaultOption.disabled = "disabled";
+    defaultOption.innerHTML = "Old to New";
+    defaultOption.value = "Old to New";
 
-    let option1 = document.createElement("option");
+    /*let option1 = document.createElement("option");
     option1.value = "Old to New";
-    option1.text = "Old to New";
+    option1.text = "Old to New";*/
 
     let option2 = document.createElement("option");
     option2.value = "New to Old";
@@ -58,7 +62,7 @@ function createSortDropdown() {
     option4.text = "Z to A";
 
     dropdown.options.add(defaultOption);
-    dropdown.options.add(option1);
+   // dropdown.options.add(option1);
     dropdown.options.add(option2);
     dropdown.options.add(option3);
     dropdown.options.add(option4);
@@ -77,14 +81,15 @@ function createFilterDropdown(filterItems) {
 
     let defaultOption = document.createElement("option");
     defaultOption.selected = "selected";
-    defaultOption.disabled = "disabled";
-    defaultOption.innerHTML = "--- Filter By ---";
+    defaultOption.innerHTML = "All";
+    defaultOption.value = "All";
+
     dropdown.add(defaultOption);
 
-    let option = document.createElement("option");
+    /*let option = document.createElement("option");
     option.value = "All";
     option.textContent = "All";
-    dropdown.options.add(option);
+    dropdown.options.add(option);*/
 
     for(item in filterItems) {
         if(filterItems.hasOwnProperty(item)) {
