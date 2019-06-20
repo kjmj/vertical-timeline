@@ -1,8 +1,17 @@
 Venice Project Center Timeline
+
 =========
 This timeline was designed to highlight the Venice Project Center's (VPC) most important moments since it was founded in 1988.
 
 **Steup**
+
+npm -g install firebase-tools
+
+-- per acceder econ il proprio account di firebase
+firebase login 
+
+-- Per pubblicare la app usare
+firebase deploy
 
 Just open "index.html"
 
