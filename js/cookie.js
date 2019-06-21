@@ -100,7 +100,10 @@ $(document).ready(function(){
 
             for (i = 0; i < links.length; i++) {
                 links[i].style.color = '#000';
-                links[i].style.textDecoration = 'underline';
+                links[i].style.fontSize = '12px';
+                links[i].style.border = '1px solid #000';
+                links[i].style.borderRadius = '5px';  
+                links[i].style.padding = '5px';
             }
 
             var height = _NibirumailGetStyle(el, 'height');
