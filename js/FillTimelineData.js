@@ -4,26 +4,26 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
     let data = json.feed.entry;
 
     // Create dropdown menus menus
-    let sortDropdown = createSortDropdown();
-    document.getElementById("dropdowns").append(sortDropdown);
-
-    let filterDropdown = createFilterDropdown(getCategories(data));
-    document.getElementById("dropdowns").append(filterDropdown);
-
-    // Listen for user to change filter/sort selection, then construct the timeline
-    document.getElementById("filterDropdown").onchange = function() {
-        let filteredAndSorted = filterAndSort(data);
-
-        document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
-        constructTimeline(filteredAndSorted);
-    };
-
-    document.getElementById("sortDropdown").onchange = function() {
-        let filteredAndSorted = filterAndSort(data);
-
-        document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
-        constructTimeline(filteredAndSorted);
-    };
+    // \let sortDropdown = createSortDropdown();
+    // \document.getElementById("dropdowns").append(sortDropdown);
+// \
+    // \let filterDropdown = createFilterDropdown(getCategories(data));
+    // \document.getElementById("dropdowns").append(filterDropdown);
+// \
+    // \// Listen for user to change filter/sort selection, then construct the timeline
+    // \document.getElementById("filterDropdown").onchange = function() {
+    // \    let filteredAndSorted = filterAndSort(data);
+// \
+    // \    document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
+    // \    constructTimeline(filteredAndSorted);
+    // \};
+// \
+    // \document.getElementById("sortDropdown").onchange = function() {
+    // \    let filteredAndSorted = filterAndSort(data);
+// \
+    // \    document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
+    // \    constructTimeline(filteredAndSorted);
+    // \};
 
     document.getElementsByClassName("cd-timeline__container")[0].innerHTML = "";
     constructTimeline(filterAndSort(data));
@@ -35,73 +35,75 @@ fetch('https://spreadsheets.google.com/feeds/list/1X1Sl-Ju4xaL6z6rp7Cua6dOoUKyPf
 /**
  * Create a dropdown containing the methods the user can sort by
  */
-function createSortDropdown() {
-    let dropdown = document.createElement("select");
-    dropdown.id = "sortDropdown";
+//function createSortDropdown() {
+//    let dropdown = document.createElement("select");
+//    dropdown.id = "sortDropdown";
+//
+//    let defaultOption = document.createElement("option");
+//    defaultOption.selected = "selected";
+//    //defaultOption.disabled = "disabled";
+//    defaultOption.innerHTML = "Old to New";
+//    defaultOption.value = "Old to New";
+//
+//    /*let option1 = document.createElement("option");
+//    option1.value = "Old to New";
+//    option1.text = "Old to New";*/
+//
+//    let option2 = document.createElement("option");
+//    option2.value = "New to Old";
+//    option2.text = "New to Old";
+//
+//    let option3 = document.createElement("option");
+//    option3.value = "A to Z";
+//    option3.text = "A to Z";
+//
+//    let option4 = document.createElement("option");
+//    option4.value = "Z to A";
+//    option4.text = "Z to A";
+//
+//    dropdown.options.add(defaultOption);
+//   // dropdown.options.add(option1);
+//    dropdown.options.add(option2);
+//    dropdown.options.add(option3);
+//    dropdown.options.add(option4);
+//
+//    return dropdown;
+//}
 
-    let defaultOption = document.createElement("option");
-    defaultOption.selected = "selected";
-    //defaultOption.disabled = "disabled";
-    defaultOption.innerHTML = "Old to New";
-    defaultOption.value = "Old to New";
 
-    /*let option1 = document.createElement("option");
-    option1.value = "Old to New";
-    option1.text = "Old to New";*/
-
-    let option2 = document.createElement("option");
-    option2.value = "New to Old";
-    option2.text = "New to Old";
-
-    let option3 = document.createElement("option");
-    option3.value = "A to Z";
-    option3.text = "A to Z";
-
-    let option4 = document.createElement("option");
-    option4.value = "Z to A";
-    option4.text = "Z to A";
-
-    dropdown.options.add(defaultOption);
-   // dropdown.options.add(option1);
-    dropdown.options.add(option2);
-    dropdown.options.add(option3);
-    dropdown.options.add(option4);
-
-    return dropdown;
-}
 
 /**
  * Create a dropdown containing the items the user can filter by
  * @param filterItems An array of strings containing the items the user can filter by
  * @returns {HTMLElement}
  */
-function createFilterDropdown(filterItems) {
-    let dropdown = document.createElement("select");
-    dropdown.id = "filterDropdown";
-
-    let defaultOption = document.createElement("option");
-    defaultOption.selected = "selected";
-    defaultOption.innerHTML = "All";
-    defaultOption.value = "All";
-
-    dropdown.add(defaultOption);
-
-    /*let option = document.createElement("option");
-    option.value = "All";
-    option.textContent = "All";
-    dropdown.options.add(option);*/
-
-    for(item in filterItems) {
-        if(filterItems.hasOwnProperty(item)) {
-            let option = document.createElement("option");
-            option.value = filterItems[item];
-            option.text = filterItems[item];
-            dropdown.options.add(option);
-        }
-    }
-
-    return dropdown;
-}
+//function createFilterDropdown(filterItems) {
+//    let dropdown = document.createElement("select");
+//    dropdown.id = "filterDropdown";
+//
+//    let defaultOption = document.createElement("option");
+//    defaultOption.selected = "selected";
+//    defaultOption.innerHTML = "All";
+//    defaultOption.value = "All";
+//
+//    dropdown.add(defaultOption);
+//
+//    /*let option = document.createElement("option");
+//    option.value = "All";
+//    option.textContent = "All";
+//    dropdown.options.add(option);*/
+//
+//    for(item in filterItems) {
+//        if(filterItems.hasOwnProperty(item)) {
+//            let option = document.createElement("option");
+//            option.value = filterItems[item];
+//            option.text = filterItems[item];
+//            dropdown.options.add(option);
+//        }
+//    }
+//
+//    return dropdown;
+//}
 
 /**
  * Construct the timeline from the data passed in

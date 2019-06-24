@@ -4,3 +4,7 @@ function showAbout(){
     	$(".about_modal").hide();
 	});
 };
+
+$(document).ready(function(){
+    $('select').formSelect();
+});

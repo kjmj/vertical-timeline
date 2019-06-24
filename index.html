@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
 	
 	<link rel='icon' href='favicon.ico' type='image/x-icon'>
 
@@ -84,9 +84,21 @@
 		<h2>Choose how to filter and sort the timeline below.</h2>
 	</header>
 
-	<span id="dropdowns"></span>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--span id="dropdowns"></span-->
 
+	<div class="input-field col s12">
+    	<select multiple>
+      		<option value="" disabled selected>Choose your option</option>
+      		<option value="1">Option 1</option>
+      		<option value="2">Option 2</option>
+      		<option value="3">Option 3</option>
+    	</select>
+    	<label>Materialize Multiple Select</label>
+  	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	
 	<section class="cd-timeline js-cd-timeline">
 
 		<div class="cd-timeline__container">
