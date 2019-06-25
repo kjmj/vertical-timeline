@@ -603,7 +603,7 @@ a.header-visit-vpc:hover{
 
 .filtri{
   margin: 0 auto;
-  width: 540px;
+  width: 650px;
   display: flex;
 }
 
@@ -623,4 +623,32 @@ a.header-visit-vpc:hover{
 }
 .caret{
   fill: #fff !important;
+}
+.anni .select-wrapper ul{
+  max-height: 360px;
+}
+.select-wrapper ul li img{
+    height: 30px !important;
+    width: 30px !important;
+    margin: 10px 15px !important;
+}
+
+.select-wrapper ul li img[src='img/cd-icon-towers.png']{
+  background-color: #e9360c !important;
+}
+
+.select-wrapper ul li img[src='img/cd-icon-star.png']{
+  background-color: #ffcd01 !important;
+}
+
+.select-wrapper ul li img[src='img/cd-icon-publication.png']{
+  background-color: #ff9901 !important;
+}
+
+.select-wrapper ul li img[src='img/cd-icon-application.png']{
+  background-color: #88d8b0 !important;
+}
+
+.dropdown-content li span{
+  color: #9e9e9e !important;
 }
