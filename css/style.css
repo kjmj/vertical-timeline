@@ -585,7 +585,7 @@ a.header-visit-vpc:hover{
 }
 
 .container h1{
-  font-size: 24px;
+  font-size: 30px;
   color: #ffffff;
 }
 
@@ -595,21 +595,24 @@ a.header-visit-vpc:hover{
 }
 
 .close_modal{
-  margin-top: 15px; 
-  font-size: 20px;
+  margin-top: 15px;
+  font-size: 26px;
   font-weight: 800;
   float: right;
-  color: red;
+  color: #fff;
   margin-right: 15px;
-  border: 3px solid red;
+  border: 3px solid #cc2f0c;
   border-radius: 5px;
+  min-width: 30px;
   padding: 5px;
+  background: #cc2f0c;
+  text-align: center;
   cursor: pointer;
 }
 
-.close_modal:hover{
+/*.close_modal:hover{
   background-color: rgba(63,63,63,0.95);
-}
+}*/
 
 .filtri{
   margin: 0 auto;
