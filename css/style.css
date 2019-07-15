@@ -536,6 +536,7 @@ header h2 {
   z-index: 5;
   display: grid;
   grid-template-areas: 'how title vpc';
+  grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 20px;
   padding-top: 20px;
   line-height: 20px;
